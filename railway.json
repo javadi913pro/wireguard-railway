@@ -18,9 +18,21 @@
     
     "restartPolicyMaxRetries": 10
     
+  },
+  
+  "tcpProxy": {
+    
+    "publicPort": 2053,
+    
+    "listeningPort": 2053
+    
   }
   
 }
+
+
+
+
 
 
 
