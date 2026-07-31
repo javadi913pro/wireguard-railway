@@ -1,20 +1,12 @@
-FROM ghcr.io/wg-easy/wg-easy
+FROM ghcr.io/amnezia-vpn/amneziawg-go:latest
 
 
 
-# Standard wg-easy environment variables
+# Set environment variables for AmneziaWG
 
-ENV WG_PORT=51820
+ENV AWG_PORT=51820
 
-ENV WG_WEB_PORT=51821
-
-ENV WG_DEFAULT_ADDRESS=10.8.0.x
-
-ENV WG_DEFAULT_DNS=1.1.1.1
-
-ENV WG_ALLOWED_IPS=0.0.0.0/0
-
-ENV WG_PERSISTENT_KEEP_ALIVE=25
+ENV AWG_WEB_PORT=51821
 
 
 
@@ -22,3 +14,6 @@ EXPOSE 51820/udp
 
 EXPOSE 51821/tcp
 
+
+
+CMD ["amneziawg-go", "wg0"]
