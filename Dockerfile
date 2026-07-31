@@ -1,0 +1,24 @@
+FROM ghcr.io/wg-easy/wg-easy
+
+
+
+# Standard wg-easy environment variables
+
+ENV WG_PORT=51820
+
+ENV WG_WEB_PORT=51821
+
+ENV WG_DEFAULT_ADDRESS=10.8.0.x
+
+ENV WG_DEFAULT_DNS=1.1.1.1
+
+ENV WG_ALLOWED_IPS=0.0.0.0/0
+
+ENV WG_PERSISTENT_KEEP_ALIVE=25
+
+
+
+EXPOSE 51820/udp
+
+EXPOSE 51821/tcp
+
