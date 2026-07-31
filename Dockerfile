@@ -1,19 +1,18 @@
-FROM ghcr.io/amnezia-vpn/amneziawg-go:latest
+FROM ghcr.io/mhsanaei/3x-ui:latest
 
 
 
-# Set environment variables for AmneziaWG
-
-ENV AWG_PORT=51820
-
-ENV AWG_WEB_PORT=51821
+ENV XRAY_VMESS_AEAD_FORCED=false
 
 
+
+EXPOSE 2053
 
 EXPOSE 51820/udp
 
-EXPOSE 51821/tcp
+
+
+CMD ["/usr/local/x-ui/x-ui"]
 
 
 
-CMD ["amneziawg-go", "wg0"]
